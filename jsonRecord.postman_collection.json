@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "453cea96-4f6d-4d8c-b019-f8cf8e4e53b4",
+		"name": "jsonRecord",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11838318"
+	},
+	"item": [
+		{
+			"name": "record",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 14,\n  \"name\": \"Kelly Kapoor\",\n  \"age\": 29,\n  \"department\": \"Customer Service\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/dataset/employee_dataset/record",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"dataset",
+						"employee_dataset",
+						"record"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "groupBy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 14,\n  \"name\": \"Kelly Kapoor\",\n  \"age\": 29,\n  \"department\": \"Customer Service\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/dataset/employee_dataset/query?groupBy=department",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"dataset",
+						"employee_dataset",
+						"query"
+					],
+					"query": [
+						{
+							"key": "groupBy",
+							"value": "department"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sortBy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 14,\n  \"name\": \"Kelly Kapoor\",\n  \"age\": 29,\n  \"department\": \"Customer Service\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/dataset/employee_dataset/query?sortBy=name&order=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"dataset",
+						"employee_dataset",
+						"query"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "name"
+						},
+						{
+							"key": "order",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
